@@ -1,3 +1,6 @@
+/*The game logic (no view code or direct user interaction)
+the game is a simple guess the word game basedd on Mastermind*/
+
 #pragma once
 #include <string>
 using FString = std::string;
@@ -26,16 +29,17 @@ public:
 	int32 GetHiddenWordLength() const;
 	bool IsGameWon() const;
 	
-	void Reset(); //TODO make a more rich return value
-	EGuessStatus CheckGuessValidity(FString) const; //TODO make a more rich return value
+	void Reset();
+	EGuessStatus CheckGuessValidity(FString) const;
 	//provide a mthod for counting bulls and cow, and increasing turn #
 	BullCowCount SubmitValidGuess(FString);
 
 private:
 	//see contructor for initalisation
 	int32 MyCurrentTry;
-	int32 MyMaxTries;
 	FString MyHiddenWord;
 	bool bGameIsWon;
 
+	bool IsIsogram(FString) const;
+	bool IsLowercase(FString) const;
 };
