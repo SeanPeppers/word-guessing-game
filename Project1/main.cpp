@@ -38,8 +38,10 @@ void PrintIntro()
 {
 	//the std means standard name space if the name space is hidden you need to use << to find them std::endl means to end line \n is the same thing but can only be used with ""
 	std::cout << "Welcome to Bulls and Cows, a fun word game.\n";
+	std::cout << "The rules are simple if you get a Bull that means the correct letter is in the correct spot\n";
+	std::cout << "but if you get a Cow that means you have the correct letter in the wrong spot.\n";
 		/*
-		DODO 
+		TODO 
 		put 
 		ascii 
 		art 
@@ -106,7 +108,7 @@ FText GetValidGuess()
 
 bool AskToPlayAgain() 
 {
-	std::cout << "Do you want to play again with the same hidden word(y/n)? ";
+	std::cout << "Do you want to play again (y/n)? ";
 	FText Response = "";
 	std::getline(std::cin, Response);
 	return(Response[0] == 'y') || (Response[0] == 'Y');
@@ -137,6 +139,8 @@ void PrintGameSummary()
 	std::cout << "  \\/___L\\ \\\\/__/\\/_/ \\/_/\\/_/\\/_/ \\/____/     \\/___/   \\/__/   \\/____/ \\/_/ " << std::endl;
 	std::cout << "    /\\____/                                                                 " << std::endl;
 	std::cout << "    \\_/__/    " << std::endl;
+	std::cout << std::endl;
+	std::cout << "The word was " << BCGame.GetWordAfterLoss() << std::endl;
 	std::cout << std::endl;
 	}
 }     
