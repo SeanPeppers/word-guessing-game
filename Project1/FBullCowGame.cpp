@@ -54,7 +54,7 @@ using int32 = int;
 	  srand(time(NULL)); //initialize the random seed
 
 
-	  FString textArray[] = { "cake", "toast", "dog", "number", "dangerously", "disgraceful", "personality", "cat", "gas", "war", "iron", "foam", "sage", "visor", "sugar", "isogram", "fight", "black", "myth", "abuse", "advise", "baloney", "bandits", "machine", "mindful", "abolishment", "handsome", "hasteful", "holidays", "humanity", "hysteric",  "majority", "nifty", "zephyr", "nigma", "documentarily", "ambidextrous", "questionable", "habit", "hacker", "earing", "rabidly", "objectify", "cryptograph", "keyboard",  "knight", "security", "umbrae", "utopia", "ghost", "pixel", "badge", "bagel", "brain", "idea", "incubate" };
+	  FString textArray[] = { "cake", "movie", "dog", "number", "dangerously", "disgraceful", "personality", "cat", "gas", "war", "iron", "foam", "sage", "visor", "sugar", "isogram", "fight", "black", "myth", "abuse", "advise", "baloney", "bandits", "machine", "mindful", "abolishment", "handsome", "hasteful", "holidays", "humanity", "hysteric",  "majority", "nifty", "zephyr", "nigma", "documentarily", "ambidextrous", "questionable", "habit", "hacker", "earing", "rabidly", "objectify", "cryptograph", "keyboard",  "knight", "security", "umbrae", "utopia", "ghost", "pixel", "badge", "bagel", "brain", "idea", "incubate" };
 	  int number;
 	  int RandIndex = rand() % 55; //generates a random number between 0 and how ever many words
 	  srand(time(0));
@@ -65,7 +65,7 @@ using int32 = int;
 	  }
 	  else if (RandIndex == 1)
 	  {
-		  FString TheString = "Toast";
+		  FString TheString = "movie";
 		  return TheString;
 	  }
 	  else if (RandIndex == 2)
